@@ -1,0 +1,17 @@
+<div ng-repeat="conn in connections">
+    <p>
+        clientId: {{conn.clientId}}
+    </p>
+    <p>
+        audio started: {{conn.isAudioStarted}}
+    </p>
+    <p>
+        location started: {{conn.isLocationStarted}}
+    </p>
+    <p>
+        wifi status: {{conn.isWifiConnected}}
+    </p>
+    <p>
+    location: lat: {{conn.location.lat}},{{conn.location.lng}} acc: {{conn.location.acc}}m timestamp: {{conn.location.timestamp}} provider: {{conn.location.provider}}
+    </p>
+</div>

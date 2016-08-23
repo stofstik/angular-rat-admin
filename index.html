@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ratDash">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title></title>
+
+    <link rel="stylesheet" media="screen" href="stylesheets/main.css">
+
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc.5/angular-material.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular-messages.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0-rc.5/angular-material.min.js"></script>
+
+    <script src="//code.angularjs.org/1.5.7/angular-route.min.js"></script>
+    <script src="//code.angularjs.org/1.5.7/angular-animate.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+
+    <script src="app.js"></script>
+    <script src="routes.js"></script>
+
+    <script src="services/dataService.js"></script>
+
+    <script src="controllers/connectionListController.js"></script>
+    <script src="controllers/mapOverviewController.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBatvzF9MCmmPz7ETtA_-AmutKHDBIU6zk"
+    async defer></script>
+</head>
+<body>
+    <div layout="column" layout-fill>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <span>Android RAT Dashboard</span>
+                <span flex></span>
+            </div>
+        </md-toolbar>
+        <md-nav-bar md-selected-nav-item="currentNavItem">
+            <md-nav-item md-nav-href="#/" name="connections">Connections</md-nav-item>
+            <md-nav-item md-nav-href="#map-overview" name="map-overview">Map Overview</md-nav-item>
+        </md-nav-bar>
+        <md-content layout-fill>
+            <ng-view layout-fill></ng-view>
+        </md-content>
+    </div>
+</body>
+</html>
